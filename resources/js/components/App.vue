@@ -1,11 +1,11 @@
 <template>
     <div class="container mt-5">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="ml-4 navbar navbar-expand-lg navbar-light bg-light">
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
-                    <router-link to="/index" class="nav-item nav-link">index</router-link>
-                    <router-link to="/create" class="nav-item nav-link">Add Book</router-link>
-                    <router-link to="/category" class="nav-item nav-link disabled">category</router-link>
+                    <router-link to="/index" class="nav-item nav-link font-weight-bold">کتاب ها </router-link>
+                    <router-link to="/create" class="nav-item nav-link font-weight-bold">ثبت کتاب</router-link>
+                    <router-link to="/category" class="nav-item nav-link disabled font-weight-bold">دسته بندی ها</router-link>
                 </div>
             </div>
         </nav>

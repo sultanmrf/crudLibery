@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
 </head>
-<body>
+<body dir="rtl">
 
 <div id="app">
     <App></App>
