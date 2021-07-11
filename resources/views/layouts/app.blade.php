@@ -7,13 +7,8 @@
     <title>Laravel & Vue C</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
-    <style>
-        .bg-light {
-            background-color: #eae9e9 !important;
-        }
-    </style>
 </head>
-<body style="background-image: url('/img/unnamed.jpg');background-attachment: fixed;background-size: 100% 800px;background-repeat: no-repeat">
+<body>
 
 <div id="app">
     <App></App>
