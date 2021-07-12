@@ -6,6 +6,8 @@ import AllBooks from './components/AllBooks.vue';
 import EditBook from './components/EditBook';
 import AddBook from './components/AddBook';
 import index from './components/index';
+import ShowBook from './components/ShowBook';
+import "animate.css/animate.min.css";
 import swal from 'sweetalert';
 
 const routes = [
@@ -24,6 +26,11 @@ const routes = [
         name: 'edit',
         path: '/edit/:id',
         component: EditBook
+    },
+    {
+        name: 'show',
+        path: '/show/:id',
+        component: ShowBook
     },
     {
         name: 'index',

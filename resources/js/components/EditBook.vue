@@ -1,18 +1,18 @@
 <template>
-    <div class="bg-light d-flex justify-content-center align-items-center flex-column p-5 rounded shadow">
-        <h3 class="text-center">Edit Book</h3>
+    <div class="bg-light d-flex justify-content-center animate__animated animate__flipInY animate__delay-1s align-items-center flex-column p-5 rounded shadow">
+        <h3 class="text-center">ویرایش کتاب</h3>
         <div class="row col-12">
             <div class="col-12 d-flex justify-content-center align-items-center p-5">
-                <form @submit.prevent="updateBook" class="col-12 d-flex justify-content-center flex-column">
+                <form @submit.prevent="updateBook" class="col-12 d-flex text-right justify-content-center flex-column">
                     <div class="form-group col-12">
-                        <label>title</label>
+                        <label>عنوان کتاب </label>
                         <input type="text" class="form-control" v-model="book.title">
                     </div>
                     <div class="form-group col-12">
-                        <label>Author</label>
+                        <label>نویسنده کتاب</label>
                         <input type="text" class="form-control" v-model="book.author">
                     </div>
-                    <button type="submit" class="btn col-8 align-self-center btn-primary">Update Book</button>
+                    <button type="submit" class="btn col-8 align-self-center btn-primary">ویرایش کتاب</button>
                 </form>
             </div>
         </div>
@@ -30,13 +30,14 @@ export default {
    const router = useRouter();
    const route = useRoute();
 
-       axios.get('http://appname.local/api/book/edit/'+route.params.id)
+       axios.get('http://appVue.local/api/book/edit/'+route.params.id)
             .then((response) => {
+                console.table(response.data.book);
                 book.value = response.data.book;
             });
 
         function updateBook() {
-            axios.post('http://appname.local/api/book/update/'+ route.params.id,
+            axios.post('http://appVue.local/api/book/update/'+ route.params.id,
                 {'title' : book.value.title,'author':book.value.author})
                 .then((response)=>{
                     swal(response.data);

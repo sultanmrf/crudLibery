@@ -1,31 +1,6 @@
 <template>
-    <div>
-        <h3 class="text-center text-light">All Books</h3><br/>
-
-        <table class="table bg-light table-bordered text-center">
-            <thead>
-            <tr>
-                <th>نام کتاب</th>
-                <th>نویسنده</th>
-                <th>تاریخ ثبت</th>
-                <th>عملیات</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="book in books" :key="book.id" :data-id="book.id" class="tr">
-                <td>{{ book.title }}</td>
-                <td>{{ book.author }}</td>
-                <td>{{ book.created_at }}</td>
-                <td class="d-flex justify-content-around align-items-center">
-                    <router-link class="btn btn-primary col-5" :to="{name:'edit',params:{id:book.id}}">edit</router-link>
-                    <button class="btn btn-danger btn-remove col-5" @click="deleteBook(book.id)">delete</button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="row col-12 flex-row flex-wrap">
-        <div class="card-c wobble skew animate__animated animate__flipInY animate__delay-2s"
+    <div class="row col-12 flex-row flex-wrap justify-content-end">
+        <div class="card-c wobble skew animate__animated animate__flipInY animate__delay-1s"
              v-for="book in books" :key="book.id" :data-id="book.id">
             <div class="content p-1">
                 <div class="w-100 px-2 py-1 pt-1">
@@ -33,9 +8,9 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center flex-column flex-wrap">
                     <h5 class="text-light my-3">{{book.title}}</h5>
-                    <p class="mt-3">{{'نویسنده : ' . book.author}}</p>
+                    <p class="mt-3">نویسنده : {{ book.author}}</p>
                     <router-link class="btn col-10 align-items-center btn-warning hvr-grow -radial-in"
-                                 to="/index">  نمایش کتاب</router-link>
+                                 :to="{name:'show',params:{id:book.id}}">  نمایش کتاب</router-link>
                     <div class="d-flex justify-content-around col-12">
                         <router-link class="btn btn-primary col-5" :to="{name:'edit',params:{id:book.id}}">ویرایش کتاب</router-link>
                         <a class="btn btn-danger btn-remove col-5" @click="deleteBook(book.id)">حذف کتاب</a>
@@ -71,7 +46,7 @@ export default {
 <style scoped>
 .container .card-c{
     position: relative;
-    width: 380px;
+    width: 308px;
     height:500px;
     margin: 20px;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);

@@ -29,10 +29,15 @@ class BookController extends Controller
 
     }
 
+    public function show($id)
+    {
+        $book = Book::query()->find($id);
+        return response()->json(['book' => $book]);
+    }
     public function edit($id)
     {
-        $books = Book::query()->find($id);
-        return response()->json(['book' => $books]);
+        $book = Book::query()->find($id);
+        return response()->json(['book' => $book]);
     }
 
     public function update(Request $request,$id)

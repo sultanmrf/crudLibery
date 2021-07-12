@@ -23,6 +23,7 @@ Route::get('books', [\App\Http\Controllers\BookController::class,'index']);
 
 Route::prefix('book')->group(function () {
     Route::post('create', [\App\Http\Controllers\BookController::class,'create']);
+    Route::get('show/{id}', [\App\Http\Controllers\BookController::class,'show']);
     Route::get('edit/{id}', [\App\Http\Controllers\BookController::class,'edit']);
     Route::post('update/{id}', [\App\Http\Controllers\BookController::class,'update']);
     Route::delete('delete/{id}', [\App\Http\Controllers\BookController::class,'delete']);

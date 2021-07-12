@@ -1,11 +1,11 @@
 <template>
     <div class="container mt-5">
-        <nav class="ml-4 navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg box-shadow-master navbar-light text-light ">
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
-                    <router-link to="/index" class="nav-item nav-link font-weight-bold">کتاب ها </router-link>
-                    <router-link to="/create" class="nav-item nav-link font-weight-bold">ثبت کتاب</router-link>
-                    <router-link to="/category" class="nav-item nav-link disabled font-weight-bold">دسته بندی ها</router-link>
+                    <router-link to="/index" class="nav-item nav-link font-weight-bold text-light">کتاب ها </router-link>
+                    <router-link to="/create" class="nav-item nav-link font-weight-bold  text-light">ثبت کتاب</router-link>
+                    <router-link to="/category" class="nav-item nav-link disabled font-weight-bold  text-light">دسته بندی ها</router-link>
                 </div>
             </div>
         </nav>
@@ -53,7 +53,6 @@ body::after{
 
 }
 .box-shadow-master{
-    border: 1px solid #e8e402;
-    box-shadow: 0 3px 6px rgba( 253,249,21,1), 0 3px 6px #e8e402;
+    box-shadow: 0 1px 2px rgba( 253,249,21,1), 0 2px 2px #e8e402;
 }
 </style>
