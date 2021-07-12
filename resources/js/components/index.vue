@@ -4,7 +4,7 @@
              v-for="book in books" :key="book.id" :data-id="book.id">
             <div class="content p-1">
                 <div class="w-100 px-2 py-1 pt-1">
-                    <img src="img/undraw_laravel_and_vue_59tp.png" style="width: 100%;height: 200px">
+                    <img src="img/44.jpg" style="width: 100%;height: 200px">
                 </div>
                 <div class="d-flex justify-content-center align-items-center flex-column flex-wrap">
                     <h5 class="text-light my-3">{{book.title}}</h5>
@@ -12,7 +12,7 @@
                     <router-link class="btn col-10 align-items-center btn-warning hvr-grow -radial-in"
                                  :to="{name:'show',params:{id:book.id}}">  نمایش کتاب</router-link>
                     <div class="d-flex justify-content-around col-12">
-                        <router-link class="btn btn-primary col-5" :to="{name:'edit',params:{id:book.id}}">ویرایش کتاب</router-link>
+                        <router-link class="btn btn-primary col-6" :to="{name:'edit',params:{id:book.id}}">ویرایش کتاب</router-link>
                         <a class="btn btn-danger btn-remove col-5" @click="deleteBook(book.id)">حذف کتاب</a>
                     </div>
                 </div>

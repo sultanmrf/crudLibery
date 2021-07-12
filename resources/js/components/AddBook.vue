@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-light bg-t d-flex animate__animated animate__flipInY animate__delay-1s justify-content-center align-items-center flex-column p-5 rounded shadow">
+    <div class="bg-light bg-t d-flex justify-content-center align-items-center flex-column p-5 rounded shadow">
         <h3 class="text-center">ایجاد کتاب</h3>
         <div class="row col-12">
             <div class="col-12 d-flex justify-content-center align-items-center  p-5">

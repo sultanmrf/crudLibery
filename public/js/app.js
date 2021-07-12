@@ -18062,8 +18062,7 @@ __webpack_require__.r(__webpack_exports__);
     var book = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)({});
     var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
     var route = (0,vue_router__WEBPACK_IMPORTED_MODULE_1__.useRoute)();
-    axios.get('http://appVue.local/api/book/show/' + route.params.id).then(function (response) {
-      console.table(response.data.book);
+    axios.get('http://appname.local/api/book/show/' + route.params.id).then(function (response) {
       book.value = response.data.book;
     });
     return {
@@ -18124,7 +18123,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "bg-light bg-t d-flex animate__animated animate__flipInY animate__delay-1s justify-content-center align-items-center flex-column p-5 rounded shadow"
+  "class": "bg-light bg-t d-flex justify-content-center align-items-center flex-column p-5 rounded shadow"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", {
@@ -18416,7 +18415,7 @@ var _hoisted_1 = {
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", {
-  "class": "text-center"
+  "class": "text-center text-light"
 }, " کتاب", -1
 /* HOISTED */
 );
@@ -18429,10 +18428,10 @@ var _hoisted_4 = {
 };
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "/img/undraw_laravel_and_vue_59tp.png",
+  src: "/img/44.jpg",
   style: {
-    "width": "100%",
-    "height": "200px"
+    "width": "60%",
+    "height": "300px"
   }
 }, null, -1
 /* HOISTED */
@@ -18482,7 +18481,7 @@ var _hoisted_2 = {
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "w-100 px-2 py-1 pt-1"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
-  src: "img/undraw_laravel_and_vue_59tp.png",
+  src: "img/44.jpg",
   style: {
     "width": "100%",
     "height": "200px"
@@ -18541,7 +18540,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     }, 1032
     /* PROPS, DYNAMIC_SLOTS */
     , ["to"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-      "class": "btn btn-primary col-5",
+      "class": "btn btn-primary col-6",
       to: {
         name: 'edit',
         params: {
@@ -23187,7 +23186,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nbody{\n    height: 99vh;\n    background: #140A49;\n}\nbody::before{\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: linear-gradient(#ff00ff,#DA0A99);\n    -webkit-clip-path: circle(20% at 100% 60%);\n            clip-path: circle(20% at 100% 60%);\n    z-index: -1;\n}\nbody::after{\n    content: \"\";\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background:radial-gradient(#a019ff\n    ,#9300fa);\n    -webkit-clip-path: circle(20% at 0% 30% );\n            clip-path: circle(20% at 0% 30% );\n    z-index: -1;\n    opacity: 0.8;\n}\n.box-shadow-master{\n    box-shadow: 0 1px 2px rgba( 253,249,21,1), 0 2px 2px #e8e402;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nbody{\r\n    height: 99vh;\r\n    background: #140A49;\n}\nbody::before{\r\n    content: \"\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: linear-gradient(#ff00ff,#DA0A99);\r\n    -webkit-clip-path: circle(20% at 100% 60%);\r\n            clip-path: circle(20% at 100% 60%);\r\n    z-index: -1;\n}\nbody::after{\r\n    content: \"\";\r\n    position: absolute;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background:radial-gradient(#a019ff\r\n    ,#9300fa);\r\n    -webkit-clip-path: circle(20% at 0% 30% );\r\n            clip-path: circle(20% at 0% 30% );\r\n    z-index: -1;\r\n    opacity: 0.8;\n}\n.box-shadow-master{\r\n    box-shadow: 0 1px 2px rgba( 253,249,21,1), 0 2px 2px #e8e402;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
