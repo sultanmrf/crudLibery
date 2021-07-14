@@ -44,7 +44,7 @@ export default {
 }
 </script>
 <style scoped>
-.container .card-c{
+.card-c{
     position: relative;
     width: 308px;
     height:500px;
@@ -59,12 +59,12 @@ export default {
     border-left: 1px solid rgba(255,255,255,0.5);
     backdrop-filter: blur(5px);
 }
-.container .card-c .content{
+.card-c .content{
     padding: 25px;
     text-align: center;
     transition: 0.5s;
 }
-.container .card-c .content h2 {
+.card-c .content h2 {
     position: absolute;
     top: -80px;
     right: 30px;
@@ -73,17 +73,17 @@ export default {
     pointer-events: none;
 
 }
-.container .card-c .content h3 {
+.card-c .content h3 {
     font-size: 1.8em;
     color: white;
     z-index: 1;
 }
-.container .card-c .content p{
+.card-c .content p{
     font-size: 1em;
     color: white;
     font-weight: 300;
 }
-.container .card-c .content a{
+.card-c .content a{
     position: relative;
     display: inline-block;
     padding: 8px 20px;
