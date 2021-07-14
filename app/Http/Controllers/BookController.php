@@ -7,11 +7,6 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function getBooks()
-    {
-        $books = Book::query()->get();
-        return view('index', ['books' => $books]);
-    }
     public function index()
     {
         $books = Book::all()->toArray();
@@ -23,6 +18,7 @@ class BookController extends Controller
          $book = new Book();
          $book->title = $request->title;
          $book->author = $request->author;
+         $book->description = $request->description;
          $book->save();
 
       return response()->json('کتاب حدید اضافه شد','200');
@@ -43,10 +39,10 @@ class BookController extends Controller
     public function update(Request $request,$id)
     {
         $book = Book::query()->find($id);
-        $book->update([
-            'title' => $request->title,
-            'author' => $request->author
-        ]);
+        $book->title = $request->title;
+        $book->author = $request->author;
+        $book->description =  $request->description;
+        $book->save();
         return response()->json('ویرایش شما با موفقیت انجام شد');
     }
 

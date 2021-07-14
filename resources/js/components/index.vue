@@ -1,5 +1,5 @@
 <template>
-    <div class="row col-12 flex-row flex-wrap justify-content-end">
+    <div class="row col-12 flex-row flex-wrap justify-content-center">
         <div class="card-c wobble skew animate__animated animate__flipInY animate__delay-1s"
              v-for="book in books" :key="book.id" :data-id="book.id">
             <div class="content p-1">
@@ -36,7 +36,7 @@ export default {
             axios.delete('api/book/delete/'+id)
                 .then(response => {
                     swal(response.data);
-                    $(".tr[data-id="+`${id}`+"]").remove();
+                    $("div[data-id="+`${id}`+"]").remove();
                 });
         }
         return {books,deleteBook}
@@ -95,6 +95,4 @@ export default {
     font-weight: 500;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
-
-
 </style>

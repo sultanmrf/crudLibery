@@ -12,6 +12,10 @@
                         <label>نویسنده کتاب</label>
                         <input type="text" class="form-control" v-model="book.author">
                     </div>
+                    <div class="form-group col-12">
+                        <label>توصیف کتاب</label>
+                        <textarea class="form-control" v-model="book.description"></textarea>
+                    </div>
                     <button type="submit" class="btn col-8 align-self-center btn-primary">ویرایش کتاب</button>
                 </form>
             </div>
@@ -30,15 +34,14 @@ export default {
    const router = useRouter();
    const route = useRoute();
 
-       axios.get('http://appVue.local/api/book/edit/'+route.params.id)
+       axios.get('http://appname.local/api/book/edit/'+route.params.id)
             .then((response) => {
-                console.table(response.data.book);
                 book.value = response.data.book;
             });
 
         function updateBook() {
-            axios.post('http://appVue.local/api/book/update/'+ route.params.id,
-                {'title' : book.value.title,'author':book.value.author})
+            axios.post('http://appname.local/api/book/update/'+ route.params.id,
+                {'title' : book.value.title,'author':book.value.author,'description':book.value.description})
                 .then((response)=>{
                     swal(response.data);
                     router.push('/index');

@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-5">
-        <nav class="navbar navbar-expand-lg box-shadow-master navbar-light text-light ">
+        <nav class="navbar navbar-expand-lg animate__fadeIn  box-shadow-master navbar-light text-light ">
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav">
                     <router-link to="/index" class="nav-item nav-link font-weight-bold text-light">کتاب ها </router-link>

@@ -12,7 +12,11 @@
                         <label>نویسنده کتاب</label>
                         <input type="text" class="form-control" v-model="books.author">
                     </div>
-                    <button type="submit" class="btn col-8 align-self-center btn-primary">ویرایش کتاب</button>
+                    <div class="form-group col-12">
+                        <label>توصیف کتاب</label>
+                        <textarea class="form-control" v-model="books.description"></textarea>
+                    </div>
+                    <button type="submit" class="btn col-8 align-self-center btn-primary">ایجاد کتاب</button>
                 </form>
             </div>
         </div>
@@ -26,14 +30,15 @@ export default {
     setup(){
         let books = {
             title : "",
-            author : ""
+            author : "",
+            description : ""
         }
 
         const router = useRouter();
         const route = useRoute();
 
         function addBook(){
-            axios.post('api/book/create', {title : books.title,author : books.author})
+            axios.post('api/book/create', {title : books.title,author : books.author ,description : books.description})
                 .then((response)=>{
                         swal(response.data);
                         router.push('/index');
