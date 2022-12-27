@@ -1,1 +1,1 @@
-project curd vue + laravel
+project crud vue + laravel
